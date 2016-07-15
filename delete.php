@@ -56,7 +56,7 @@ if (isset($_POST['id'])) {
       "errorkeys" => $errorkeys,
       "initialPreview" =>  $imgArr,
       "initialPreviewConfig" => $prevStr,
-      "initialPreviewThumbTags" => $errorkeys,//empty n purpose, dont want tags/captions
+      "initialPreviewThumbTags" => $errorkeys,//empty on purpose, dont want tags/captions
       "append" =>  false
       );
 
