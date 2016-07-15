@@ -24,7 +24,7 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && ($_SERVER['HTTP_X_REQUESTED_WITH
           $basename = strtoupper(str_replace(" ","_", mysql_result($rsProduct,0,'name'))) . "_"
             . strtoupper(str_replace(" ","", mysql_result($rsProduct,0,'sku')));
 
-
+          //all uploaded files get renamed with part of the name including an incremental number
           //find existing files, get the last 2 digits of the most recent one and add it to $j
           $qryExtraImages = "Select * From ExtraImages Where sku_id = " . mysql_real_escape_string($sku_id) . " Order by id desc";
           $rsExtraImages = mysql_query($qryExtraImages) or die(mysql_error());
@@ -53,7 +53,6 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && ($_SERVER['HTTP_X_REQUESTED_WITH
 
               $visIDarr[$t] = $rsVisi->insert_id;
               $imgArr[$t] = "http://www.mywebsite.com/thumbs/" . $newname;
-              //$imgStr = $imgStr . json_encode("http://www.mywebsite.com/thumbs/" . $newname) . ",";
 
               $t = $t + 1;
 
@@ -83,7 +82,6 @@ if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && ($_SERVER['HTTP_X_REQUESTED_WITH
         "append" =>  true
         );
 
-echo substr($imgStr, 0, -2);
         echo json_encode($sendStr);
 }
 ?>
