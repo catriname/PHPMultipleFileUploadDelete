@@ -87,8 +87,6 @@
               });
               $('#kv-success-2 ul').append(out);
               $('#kv-success-2').fadeIn('slow');
-
-
         });
     });
     </script>
@@ -100,8 +98,6 @@
             <div class="page">
                 <h1><?php echo $name . " - " . $sku; ?></h1>
                 <hr>
-
-
                 <form enctype="multipart/form-data" action="" method="post">
                     <h2 class="text-muted">Add Visualizer Images</h2>
                     Visualizer requires 9 Images (JPEG,PNG,JPG).  Image Size Should Be Less Than 10MB.
@@ -111,19 +107,17 @@
                     </div><br/>
 
                     <input type="hidden" id="sku_id" class="upload" name="sku_id" value="<?php echo $sku_id; ?>"/>
-                    <!--<input type="submit" value="Upload File" name="submit" id="upload" class="upload btn btn-primary"/>-->
                 </form>
                 <br/>
                 <div id="kv-error-2"></div>
                 <div id="kv-success-2"></div>
                 <br/>
-				        <!-------Including PHP Script here------>
+
                 <?php
                   include "upload.php";
                   include "delete.php";
                  ?>
             </div>
-
         </div>
     </body>
 </html>
