@@ -50,5 +50,4 @@ $xmlTxt =  '<MyCompany version="1.0.85">
       fwrite($handle, $data);
       fclose($handle);
       header( 'Location: feed.xml' ) ;
-
 ?>
