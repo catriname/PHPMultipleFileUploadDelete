@@ -26,7 +26,7 @@ $xmlTxt =  '<MyCompany version="1.0.85">
           <filter label="Format">' . $row['format'] . '</filter>
           <filter label="Warranty">' . $row['warranty'] .'</filter>
           <filter label="Design Style">' . $row['design'] .'</filter>
-          <filter label="Color Description">' . $row['color .'</filter>
+          <filter label="Color Description">' . $row['color']  .'</filter>
           <tag label="Width">' . $row['width'] . '</tag>
           <tag label="Length">' . $row['length'] . '</tag>
     			<tag label="S/F Per Carton">' . $row['sqft_ctn'] . '</tag>';
