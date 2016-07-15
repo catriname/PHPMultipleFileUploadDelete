@@ -4,6 +4,11 @@
     $sku_id = $_GET["id"];
     $sku = $_GET["sku"];
     $skuName = $_GET["name"];
+    
+    if ($sku_id == '' || $sku == '' || $skuName || ''){
+        echo "<b>Error:</b> This program requires you pass 3 parameters (see notes)<br>";
+        die();
+    }
 
     $qryStr = "Select * From ExtraImages Where sku_id = " . mysql_real_escape_string($sku_id);
     $result = mysql_query($qryStr) or die(mysql_error());
