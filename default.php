@@ -50,7 +50,7 @@
                       initialPreview: [' . "\n";
                         while ($row = mysql_fetch_array($result)){
                           $imgStr = $imgStr . '
-                            "http://www.mywebsite.com/thumbs/' . $row['imgName'] . '", ';
+                            "http://www.mywebsite.com/extraimages/thumbs/' . $row['imgName'] . '", ';
                              $visIDarr[$f] = $row['id'];
                              $f++;
                           }
