@@ -60,7 +60,6 @@ if (isset($_POST['id'])) {
       "append" =>  false
       );
 
-
       echo json_encode($sendStr);
 }
 ?>
